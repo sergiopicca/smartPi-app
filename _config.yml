@@ -20,7 +20,6 @@
 
 title: "SmartPi"
 remote_theme: pmarsceill/just-the-docs
-search_enabled: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
