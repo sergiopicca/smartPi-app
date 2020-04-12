@@ -1,0 +1,82 @@
+{
+  
+  "0": {
+    "title": "",
+    "content": "404 . Page not found :( . The requested page could not be found. .",
+    "url": "http://localhost:4000/404.html",
+    "relUrl": "/404.html"
+  }
+  ,"1": {
+    "title": "About",
+    "content": "This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at jekyllrb.com . You can find the source code for Minima at GitHub: jekyll / minima . You can find the source code for Jekyll at GitHub: jekyll / jekyll .",
+    "url": "http://localhost:4000/pages/about.html",
+    "relUrl": "/pages/about.html"
+  }
+  ,"2": {
+    "title": "Design of the application",
+    "content": "Design of the application . In this section will be describe the user interface of the SmartPi application. We used Android Studio for developing the front-end and we write the app in Kotlin, in order to try something different from Java. The design of the application is based on the Model View ViewModel (MVVM), since we tried to follow the suggestions of the Android documentation. . Concept of activity . Every Android App is made up of activities that initiates code invoking specific callbacks methods. The activity typically provides the screen where the user interaction takes place and it can occupy the whole screen or not, so one application can contain more activities or fragments. Furthermore an activity can host one or more fragments (a sort of “sub-activity”) to support more dynamic and flexible UI, more info can be find in the official developer android documentation. . Model View ViewModel . Apart from the official documentation there is an interesting article on Medium that explain in a clever and fast way the MVVM design architecture, that you can find here. Basically, the most important principle to follow is the separation of concern, trying to avoid to write all the code inside the activity or the fragment. . . The above image describes the model and its main components, so let’s examine them. . View. The view is responsible … | ViewModel. | Model. |",
+    "url": "http://localhost:4000/pages/appdesign.html",
+    "relUrl": "/pages/appdesign.html"
+  }
+  ,"3": {
+    "title": "Backend",
+    "content": "Backend .",
+    "url": "http://localhost:4000/pages/backend.html",
+    "relUrl": "/pages/backend.html"
+  }
+  ,"4": {
+    "title": "SmartPi",
+    "content": "The idea . SmartPi is an Android smart surveillance application that we built as a University project for the Mobile application and cloud computing course in Sapienza University of Rome. The application connects to a remote controllable PiCamera on a Raspberry Pi 3, supporting both motion detection and face recognition that we can switch on by using the app. . .",
+    "url": "http://localhost:4000/",
+    "relUrl": "/"
+  }
+  ,"5": {
+    "title": "References",
+    "content": "Google documentation . Introduction to activities: https://developer.android.com/guide/components/activities/intro-activities | Model View ViewModel architecture: https://developer.android.com/jetpack/docs/guide | .",
+    "url": "http://localhost:4000/pages/references.html",
+    "relUrl": "/pages/references.html"
+  }
+  ,"6": {
+    "title": "Login and registration",
+    "content": "Login and registration .",
+    "url": "http://localhost:4000/pages/ui-auth.html",
+    "relUrl": "/pages/ui-auth.html"
+  }
+  ,"7": {
+    "title": "Camera",
+    "content": "Camera .",
+    "url": "http://localhost:4000/pages/ui-camera.html",
+    "relUrl": "/pages/ui-camera.html"
+  }
+  ,"8": {
+    "title": "First usage",
+    "content": "First usage .",
+    "url": "http://localhost:4000/pages/ui-first-usage.html",
+    "relUrl": "/pages/ui-first-usage.html"
+  }
+  ,"9": {
+    "title": "Home",
+    "content": "Home .",
+    "url": "http://localhost:4000/pages/ui-home.html",
+    "relUrl": "/pages/ui-home.html"
+  }
+  ,"10": {
+    "title": "Profile",
+    "content": "Profile .",
+    "url": "http://localhost:4000/pages/ui-profile-recap.html",
+    "relUrl": "/pages/ui-profile-recap.html"
+  }
+  ,"11": {
+    "title": "Room",
+    "content": "Room details . Once the user click on a particular room, this is the view presenting the devices of the room. Here the user can select one device, depending what he or she would like to do. For our application we actually implemented only the camera, so the other device are simply *unavailable**; however the application can be extended for instance to control some lights in the room, actually this functionality will be probably included in one next version. . Room detail fragment . In our code the fragment holding the room is called RoomDetailFragment, that hosts a recycler view with a grid layout to display the devices: . // Set the GridLayout val manager = GridLayoutManager(activity, 2) binding.deviceList.layoutManager = manager // Change the view // Add the room name binding.name.text = roomName binding.labelDevices.text = deviceLabel // Get the devices of the room roomDetailViewModel.getDevices(homeId,roomId) // Pass the devices to the adapter roomDetailViewModel._devices.observe(viewLifecycleOwner, Observer { it?.let { adapter.submitList(it) } }) . In the above code we set the grid layout, we assign the room name, the subtitle (the label), and we call the function from the view model in order to get the devices from the real-time database, so we observe the variable _devices that is a Mutable LiveData, holding all the devices of the room and once the data is ready we assign the list to the adapter. .",
+    "url": "http://localhost:4000/pages/ui-room-detail.html",
+    "relUrl": "/pages/ui-room-detail.html"
+  }
+  ,"12": {
+    "title": "User interface",
+    "content": "User interface . Here we will examine the different interfaces of the application. We will go through the views of the application describing what the need for and how they are made, basically we have different activities for the sign-up and the sign-in of the application, but once the user enters in the application, so is authenticated we have one single activity and many fragment. In particular, each view has a fragment, a view model and a view model factory to create the view model, with a common convention for their names, for instance the home of the application has an HomeFragment, a HomeViewModel and a HomeViewModelFactory. . Here we can find a list of the views of the application, each will be described more in detail in its own section. .",
+    "url": "http://localhost:4000/pages/ui.html",
+    "relUrl": "/pages/ui.html"
+  }
+  
+}
