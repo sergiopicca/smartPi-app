@@ -9,9 +9,9 @@ parent: User interface
 
 ## Login
 The Login gives you three different mode to access in our app:
-- [Email](#email)
-- [Google](#google)
-- [Facebook](#facebook)
+- [Email](https://firebase.google.com/docs/auth/android/email-link-auth)
+- [Google](https://firebase.google.com/docs/auth/android/google-signin)
+- [Facebook](https://firebase.google.com/docs/auth/android/facebook-login)
 
 ### Email
 It is the classic method: once you are registered, you put in the fields your email and password inserted during the registration step.
