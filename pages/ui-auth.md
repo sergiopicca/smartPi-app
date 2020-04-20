@@ -5,9 +5,9 @@ nav_order: 3
 parent: User interface
 nav_order: 1
 ---
-#  *Login and registration*
+#  Login and registration
 
-## Login
+## *Login*
 The Login gives you three different mode to access in our app:
 - [*Email and password*](#email)
 - [*Google*](#google)
@@ -23,7 +23,7 @@ If you have a Google account and you do not want to have some troubles with reme
 In the same way of Google authentication, the Facebook button does the same operation but it uses your Facebook account.
 
 -- (Possible image)
-## Registration
+## *Registration*
 More in depth, let us see the phase of registration.
 First of all, the user has to fill the form with his email and a password and once he has completed it, the next step is to create an house or join an existing house.
 - *New house*: this option is suggested when you are new to this system and you are the owner of you house and you want to set up your videosurveillance system. The form to complete provides information about your house (address, geolocalization and eventually the telephone number) in order to recognize it. At the end, you are redirected to the Home Activity in your house.
