@@ -21,7 +21,7 @@ The UI offers:
 * A Button that offers the possibility to take a snapshot and upload it on Firebase Storage.
 * A Button that redirects to the list of images relative to your house
 
---
+---
 
 To remotely manage the piCamera the application performs HTTP requests to the REST server hosted in the Raspberry Pi in your house.
 The requests are made using the Volley library. If you know to know more about it, [here](https://developer.android.com/training/volley) you can find the offical documentation.
