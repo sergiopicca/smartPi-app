@@ -48,7 +48,7 @@ In particular:
 | --- | --- | --- | --- |
 | SUCCESS | 200 | `{"status":"success","message":"Hello, World!"}`| Display an "Hello, World!" message |
 
-#### Register the house_id on the Raspberry Pi, and get your token
+#### **Register the house_id on the Raspberry Pi, and get your token**
 This API is used to enable the upload of the images on firebase storage passing the house_id.
 It returns the token. (The provided token has a validity of 24 hours)
 
@@ -66,7 +66,7 @@ It returns the token. (The provided token has a validity of 24 hours)
 | SUCCESS | 200 | `{"status":"success" , "auth-token" : <auth-token> }`| The authorization token is returned. Validity of 24 hours |
 
 
-#### Get your token
+#### **Get your token**
 (The provided token has a validity of 24 hours)
 
 | REQUEST PARAMETERS | VALUE |
@@ -84,7 +84,7 @@ It returns the token. (The provided token has a validity of 24 hours)
 
 ### Authorization needed
 
-#### Get the motion detection status
+#### **Get the motion detection status**
 
 | REQUEST PARAMETERS | VALUE |
 |---|---|
@@ -101,7 +101,7 @@ It returns the token. (The provided token has a validity of 24 hours)
 | SUCCESS | 200 | `{ "status": "success","message":"Motion active"}` | Returned if motion detection is active |
 | SUCCESS | 200 |`{ "status": "success","message":"Motion not active"}` | Returned if motion detection is disable |
 
-#### Set motion detection status
+#### **Set motion detection status**
 
 | REQUEST PARAMETERS | VALUE |
 |---|---|
@@ -121,7 +121,7 @@ It returns the token. (The provided token has a validity of 24 hours)
 | SUCCESS | 200 | `{ "status": "success","message":"Motion activated"}` | Returned if motion detection is actived |
 | SUCCESS | 200 |`{ "status": "success","message":"Motion disabled"}` | Returned if motion detection is disabled |
 
-#### Get the face detection status
+#### **Get the face detection status**
 
 | REQUEST PARAMETERS | VALUE |
 |---|---|
@@ -138,7 +138,7 @@ It returns the token. (The provided token has a validity of 24 hours)
 | SUCCESS | 200 | `{ "status": "success","message":"Face detection active"}` | Returned if face detection is active |
 | SUCCESS | 200 |`{ "status": "success","message":"Face detection not active"}` | Returned if face detection is disable |
 
-#### Set motion detection status
+#### **Set motion detection status**
 
 | REQUEST PARAMETERS | VALUE |
 |---|---|
@@ -158,7 +158,7 @@ It returns the token. (The provided token has a validity of 24 hours)
 | SUCCESS | 200 | `{ "status": "success","message":"Face detection activated"}` | Returned if face detection is actived |
 | SUCCESS | 200 |`{ "status": "success","message":"Face detection disabled"}` | Returned if face detection is disabled |
 
-#### Get angle status
+#### **Get angle status**
 
 | REQUEST PARAMETERS | VALUE |
 |---|---|
@@ -174,7 +174,7 @@ It returns the token. (The provided token has a validity of 24 hours)
 | ERROR | 401 | `{"status":"error" , "message":"token invalid"}` | Authorization token provided invalid |
 | SUCCESS | 200 | `{ "status": "success","message":" <angle>" }` | Return the current angle |
 
-#### Set angle
+#### **Set angle**
 
 | REQUEST PARAMETERS | VALUE |
 |---|---|
@@ -193,7 +193,7 @@ It returns the token. (The provided token has a validity of 24 hours)
 | ERROR | 200 | `{ "status": "error","message":"angle field invalid. Please insert a number between -90 to 90"}` | Value of parameter invalid |
 | SUCCESS | 200 | `{ "status": "success","message":"<angle>"}` | Return the new angle value |
 
-#### Get the video stream
+#### **Get the video stream**
 
 | REQUEST PARAMETERS | VALUE |
 |---|---|
@@ -208,7 +208,7 @@ It returns the token. (The provided token has a validity of 24 hours)
 | ERROR | 401 | `{"status":"error" , "message":"token invalid"}` | Authorization token provided invalid |
 | SUCCESS | 200 | Stream images | Return directly the stream |
 
-#### Get the video stream HTML page
+#### **Get the video stream HTML page**
 
 | REQUEST PARAMETERS | VALUE |
 |---|---|
@@ -223,7 +223,7 @@ It returns the token. (The provided token has a validity of 24 hours)
 | ERROR | 401 | `{"status":"error" , "message":"token invalid"}` | Authorization token provided invalid |
 | SUCCESS | 200 | HTML page | Return a simple HTML page with the stream in it |
 
-#### Take a snapshot
+#### **Take a snapshot**
 Take a snapshot and uploaod it on firebase storage.
 
 | REQUEST PARAMETERS | VALUE |
