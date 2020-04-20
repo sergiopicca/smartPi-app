@@ -36,7 +36,7 @@ In particular:
 
 ### No authorization needed
 
-#### Display an "Hello, World!" message
+#### **Display an "Hello, World!" message**
 
 | REQUEST PARAMETERS | VALUE |
 |---|---|
