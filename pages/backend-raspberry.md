@@ -36,18 +36,6 @@ In particular:
 
 ### No authorization needed
 
-#### **Display an "Hello, World!" message**
-
-| REQUEST PARAMETERS | VALUE |
-|---|---|
-|       HTTP METHOD:      | GET                              |
-| HTTP HEADER (optional): | `"ContentType : application/json"` |
-| REQUEST URL: | your-api-url/ |
-
-| RESPONSE STATUS | CODE | VALUE | DESCRIPTION |
-| --- | --- | --- | --- |
-| SUCCESS | 200 | `{"status":"success","message":"Hello, World!"}`| Display an "Hello, World!" message |
-
 #### **Register the house_id on the Raspberry Pi, and get your token**
 This API is used to enable the upload of the images on firebase storage passing the house_id.
 It returns the token. (The provided token has a validity of 24 hours)
@@ -83,6 +71,20 @@ It returns the token. (The provided token has a validity of 24 hours)
 | SUCCESS | 200 | `{"status":"success" , "auth-token" : <auth-token> }`| The authorization token is returned. Validity of 24 hours |
 
 ### Authorization needed
+
+#### **Display an "Hello, World!" message**
+Used to check the availability of the device, and to check if actual token is expired.
+
+| REQUEST PARAMETERS | VALUE |
+|---|---|
+|       HTTP METHOD:      | GET                              |
+| HTTP HEADER: | `"Authorization : <token>" ` |
+| HTTP HEADER (optional): | `"ContentType : application/json"` |
+| REQUEST URL: | your-api-url/ |
+
+| RESPONSE STATUS | CODE | VALUE | DESCRIPTION |
+| --- | --- | --- | --- |
+| SUCCESS | 200 | `{"status":"success","message":"Hello, World!"}`| Display an "Hello, World!" message |
 
 #### **Get the motion detection status**
 
