@@ -1,0 +1,16 @@
+{
+	"_COMMENT_1": 	"To obtain this file create a service account on Firebase ",
+	"_COMMENT_2":	"With write permission in Firebase Storage",
+	
+	
+	"type": "<account-type>", 
+	"project_id": "<project-id>",
+  	"private_key_id": "<private-key-id",
+  	"private_key": "<private-key>",
+  	"client_email": "<client-mail>",
+  	"client_id": "<client-id>",
+ 	"auth_uri": "<auth-api-url>",
+  	"token_uri": "<token-api-url>",
+  	"auth_provider_x509_cert_url": "<cert-provider-url>",
+	"client_x509_cert_url": "<client-certificate-url>"
+}

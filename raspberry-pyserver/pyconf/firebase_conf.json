@@ -1,0 +1,6 @@
+{
+	"use_firebase": false, 
+	"bucket": "<bucket-name>",
+	"api_key": "<Firebase-Cloud-Message-Api-Key",
+	"base_path": ""
+}

@@ -1,0 +1,12 @@
+{
+	"ip_address": "0.0.0.0",
+	"port": 3877,
+	"min_upload_seconds": 10.0,
+	"min_motion_frames": 5,
+	"camera_warmup_time": 2.5,
+	"delta_thresh": 5,
+	"resolution": [640, 480],
+	"fps": 16,
+	"min_area": 5000,
+	"frame_count":32
+}
