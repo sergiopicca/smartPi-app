@@ -1,9 +1,8 @@
 ---
 layout: default
 title: Room
-nav_order: 3
-parent: User interface
 nav_order: 4
+parent: User interface
 ---
 #  Room details
 
