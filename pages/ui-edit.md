@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Chat
+title: Edit
 nav_order: 7
 parent: User interface
 ---
