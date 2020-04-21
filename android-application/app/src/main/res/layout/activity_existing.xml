@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.firebaseauthmvvm.ui.existing.ExistingViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground"
+        android:orientation="vertical"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        tools:context=".ui.existing.ExistingActivity">
+
+        <TextView
+            android:id="@+id/existing_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="@font/aspira_medium"
+            android:text="Insert here the secret code given by the owner of the house"
+            android:textColor="@color/colorButton"
+            android:textSize="35sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edittext_existing_house"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/input_type_custom"
+            android:drawableStart="@drawable/ic_home"
+            android:drawablePadding="10sp"
+            android:ems="10"
+            android:fontFamily="@font/aspira_medium"
+            android:hint="Insert code"
+            android:padding="10sp"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/existing_text_view" />
+
+        <Button
+            android:id="@+id/button_existing_house"
+            android:layout_width="171dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/button_light"
+            android:drawableEnd="@drawable/ic_arrow_back_48px"
+            android:elevation="50dp"
+            android:fontFamily="@font/aspira_medium"
+            android:paddingRight="20sp"
+            android:text="Done"
+            android:textAllCaps="false"
+            android:textColor="@color/colorBackgroundLight"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edittext_existing_house" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

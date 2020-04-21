@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#343843</color> <!-- edit #00574B -->
+    <color name="colorAccent">#EAB03D</color>
+    <!-- SmartPi colors -->
+    <color name="colorBackground">#3F4554</color>
+    <color name="colorBackgroundLight">#FFFFFF</color>
+    <color name="colorNav">#343843</color>
+    <color name="colorButton">#EAB03D</color>
+    <color name="colorButtonLight">#FCEEC5</color>
+    <color name="colorinputBorder">#CFD3DD</color>
+
+    <!-- Background of the layout of the fragment of the edit text -->
+    <color name="colorChatLogBackground">#EFF1F7</color>
+</resources>

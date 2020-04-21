@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Data to make available to the XML via data binding. In this case,
+         the whole ViewModel, so that we can access the LiveData,
+         click handlers, and state variables. -->
+    <data>
+        <variable
+            name="homeViewModel"
+            type="com.example.firebaseauthmvvm.ui.home.HomeViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBackground">
+
+            <TextView
+                android:id="@+id/text_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="48dp"
+                android:fontFamily="@font/aspira_medium"
+                android:text="Hello,"
+                android:textColor="#FFFFFF"
+                android:textSize="42sp"
+                app:layout_constraintEnd_toStartOf="@+id/text_home_username"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_home_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="48dp"
+                android:fontFamily="@font/aspira_bold"
+                android:text="@{homeViewModel.fetchedUser.username.toString()}"
+                android:textColor="#FFFFFF"
+                android:textSize="42sp"
+                app:layout_constraintStart_toEndOf="@+id/text_home"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/email_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/aspira_medium"
+                android:text="What do you want to do today?"
+                android:textColor="#8B8989"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_home" />
+
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/colorButtonLight"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/email_view" />
+
+            <TextView
+                android:id="@+id/home_calendar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="54dp"
+                android:layout_marginTop="24dp"
+                android:drawableStart="@drawable/ic_ionic_md_calendar"
+                android:drawablePadding="10sp"
+                android:fontFamily="@font/aspira_bold"
+                android:text="@{homeViewModel._dateWeather}"
+                android:textColor="@color/colorBackgroundLight"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <TextView
+                android:id="@+id/home_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:drawableStart="@drawable/ic_material_my_location"
+                android:drawablePadding="8sp"
+                android:fontFamily="@font/aspira_regular"
+                android:text="@{homeViewModel._cityWeather}"
+                android:textColor="@color/colorBackgroundLight"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/home_calendar"
+                app:layout_constraintTop_toBottomOf="@+id/home_calendar" />
+
+            <TextView
+                android:id="@+id/home_temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:fontFamily="@font/aspira_thin"
+                android:text="@{homeViewModel._tempWeather}"
+                android:textColor="@color/colorBackgroundLight"
+                android:textSize="56sp"
+                app:layout_constraintStart_toEndOf="@+id/home_calendar"
+                app:layout_constraintTop_toTopOf="@+id/home_calendar" />
+
+            <TextView
+                android:id="@+id/home_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/aspira_thin_italic"
+                android:text="@{homeViewModel._descrWeather}"
+                android:textColor="@color/colorBackgroundLight"
+                app:layout_constraintBottom_toBottomOf="@+id/home_location"
+                app:layout_constraintStart_toStartOf="@+id/home_temperature"
+                app:layout_constraintTop_toBottomOf="@+id/home_temperature" />
+
+            <Button
+                android:id="@+id/showUserRecap"
+                android:layout_width="53dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="320dp"
+                android:layout_marginTop="41dp"
+                android:layout_marginBottom="37dp"
+                android:background="@drawable/ic_dialog_menu"
+                app:layout_constraintBottom_toTopOf="@+id/email_view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+
+            <TextView
+                android:id="@+id/label_rooms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/aspira_regular"
+                android:text="Select one of your rooms:"
+                android:textColor="@color/colorBackgroundLight"
+                android:textSize="28sp"
+                app:layout_constraintStart_toStartOf="@+id/rooms_list"
+                app:layout_constraintTop_toBottomOf="@+id/home_description" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rooms_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/label_rooms" />
+
+            <ru.tinkoff.scrollingpagerindicator.ScrollingPagerIndicator
+                android:id="@+id/indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rooms_list" />
+
+            <ImageView
+                android:id="@+id/iconWeather"
+                android:layout_width="89dp"
+                android:layout_height="86dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="30dp"
+                app:layout_constraintBottom_toTopOf="@+id/label_rooms"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/home_temperature"
+                app:layout_constraintTop_toBottomOf="@+id/view"
+                app:layout_constraintVertical_bias="0.0"
+                tools:srcCompat="@tools:sample/avatars[1]" />
+
+            <Button
+                android:id="@+id/addRoom"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="74dp"
+                android:background="@drawable/button_darker"
+                android:capitalize="none"
+                android:drawableEnd="@drawable/ic_add_dark"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/aspira_medium"
+                android:padding="10dp"
+                android:text="Or add a new room"
+                android:textAllCaps="false"
+                android:textColor="#8B8989"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/indicator" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</layout>

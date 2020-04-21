@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.firebaseauthmvvm.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/goToRecap"
+            app:destination="@id/dialogFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_roomDetailFragment"
+            app:destination="@id/roomDetailFragment"
+            app:launchSingleTop="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_edit"
+        android:name="com.example.firebaseauthmvvm.ui.edit.EditFragment"
+        android:label="EditFragment"
+        tools:layout="@layout/fragment_edit">
+        <action
+            android:id="@+id/action_navigation_edit_to_imagesFragment"
+            app:destination="@id/imagesFragment" />
+        <action
+            android:id="@+id/action_navigation_edit_to_modifyFragment"
+            app:destination="@id/modifyFragment" />
+    </fragment>
+<!--    <fragment-->
+<!--        android:id="@+id/navigation_settings"-->
+<!--        android:name="com.example.firebaseauthmvvm.ui.settings.SettingsFragment"-->
+<!--        android:label="SettingsFragment"-->
+<!--        tools:layout="@layout/fragment_settings">-->
+<!--        <action-->
+<!--            android:id="@+id/action_navigation_settings_to_imagesFragment"-->
+<!--            app:destination="@id/imagesFragment" />-->
+<!--    </fragment>-->
+
+    <fragment
+        android:id="@+id/modifyFragment"
+        android:name="com.example.firebaseauthmvvm.ui.modify.ModifyFragment"
+        android:label="ModifyFragment"
+        tools:layout="@layout/fragment_modify" >
+        <argument
+            android:name="houseId"
+            app:argType="string" />
+        <argument
+            android:name="houseName"
+            app:argType="string" />
+        <argument
+            android:name="houseTelephone"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_modifyFragment_to_navigation_edit"
+            app:destination="@id/navigation_edit" />
+    </fragment>
+<!-- NEW -->
+    <fragment
+        android:id="@+id/imagesFragment"
+        android:name="com.example.firebaseauthmvvm.ui.gallery.ImagesFragment"
+        android:label="ImagesFragment"
+        tools:layout="@layout/fragment_images">
+        <argument
+            android:name="houseId"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.example.firebaseauthmvvm.ui.notifications.NotificationsFragment"
+        android:label="NotificationsFragment"
+        tools:layout="@layout/fragment_notifications"/>
+    <fragment
+        android:id="@+id/dialogFragment"
+        android:name="com.example.firebaseauthmvvm.ui.recap.RecapFragment"
+        android:label="DialogFragment"
+        tools:layout="@layout/fragment_recap">
+        <action
+            android:id="@+id/action_dialogFragment_to_navigation_home"
+            app:destination="@id/navigation_home"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/dialogFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/roomDetailFragment"
+        android:name="com.example.firebaseauthmvvm.ui.roomDetail.RoomDetailFragment"
+        android:label="RoomDetailFragment"
+        tools:layout="@layout/fragment_room_detail">
+        <argument
+            android:name="roomName"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_roomDetailFragment_to_navigation_home2"
+            app:destination="@id/navigation_home"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/roomDetailFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="roomId"
+            app:argType="string" />
+        <argument
+            android:name="houseId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_roomDetailFragment_to_cameraLoginFragment"
+            app:destination="@id/cameraLoginFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/roomDetailFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_roomDetailFragment_to_cameraFragment"
+            app:destination="@id/cameraFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/roomDetailFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="deviceUnavailable"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cameraLoginFragment"
+        android:name="com.example.firebaseauthmvvm.ui.picamera.login.CameraLoginFragment"
+        android:label="CameraLoginFragment"
+        tools:layout="@layout/fragment_camera_login">
+        <action
+            android:id="@+id/action_cameraLoginFragment_to_cameraFragment"
+            app:destination="@id/cameraFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/cameraLoginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_cameraLoginFragment_to_roomDetailFragment"
+            app:destination="@id/roomDetailFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/cameraLoginFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="roomId"
+            app:argType="string" />
+        <argument
+            android:name="roomName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.example.firebaseauthmvvm.ui.picamera.camera.CameraFragment"
+        android:label="CameraFragment"
+        tools:layout="@layout/fragment_camera">
+        <action
+            android:id="@+id/action_cameraFragment_to_cameraRecoveryLogin"
+            app:destination="@id/cameraRecoveryLogin"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/cameraFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="deviceId"
+            app:argType="string" />
+        <argument
+            android:name="houseId"
+            app:argType="string" />
+        <argument
+            android:name="roomId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_cameraFragment_to_roomDetailFragment"
+            app:destination="@id/roomDetailFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/cameraFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="roomName"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_cameraFragment_to_imagesFragment"
+            app:destination="@id/imagesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cameraRecoveryLogin"
+        android:name="com.example.firebaseauthmvvm.ui.picamera.recoveryLogin.CameraRecoveryLogin"
+        android:label="CameraRecoveryLogin"
+        tools:layout="@layout/fragment_camera_recovery_login">
+        <action
+            android:id="@+id/action_cameraRecoveryLogin_to_cameraFragment"
+            app:destination="@id/cameraFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/cameraRecoveryLogin"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="deviceId"
+            app:argType="string" />
+        <argument
+            android:name="baseUrl"
+            app:argType="string" />
+        <argument
+            android:name="houseId"
+            app:argType="string" />
+        <argument
+            android:name="roomId"
+            app:argType="string" />
+        <argument
+            android:name="roomName"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_cameraRecoveryLogin_to_roomDetailFragment"
+            app:destination="@id/roomDetailFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/cameraRecoveryLogin"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
