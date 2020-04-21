@@ -12,7 +12,7 @@ The backend on the Raspberry Pi offers the APIs to manage and control the piCame
 
 The backend must be personal and you need to own your Raspberry Pi, camera and motor.
 
-![Camera-inside](images/camera_inside.jpg)
+![Camera-inside](../images/camera_inside.jpg)
 
 ### REST server
 
@@ -33,7 +33,7 @@ In particular:
 * [Motion detection (complete)](https://www.pyimagesearch.com/2015/06/01/home-surveillance-and-motion-detection-with-the-raspberry-pi-python-and-opencv/)
 * [Face recognition](https://www.pyimagesearch.com/2018/06/25/raspberry-pi-face-recognition/)
 
-![Camera-ouside](images/camera_outside.jpg)
+![Camera-ouside](../images/camera_outside.jpg)
 
 ## APIs
 
