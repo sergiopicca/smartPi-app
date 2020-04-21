@@ -12,6 +12,8 @@ The backend on the Raspberry Pi offers the APIs to manage and control the piCame
 
 The backend must be personal and you need to own your Raspberry Pi, camera and motor.
 
+![Camera-inside](images/camera_inside.jpg)
+
 ### REST server
 
 The server is developed in python. The choice of this programming language is given by the fact that python offers really good library to handle both the piCamera module and the GPIO pin in PWM mode (needed to handle the servo motor).
@@ -31,6 +33,7 @@ In particular:
 * [Motion detection (complete)](https://www.pyimagesearch.com/2015/06/01/home-surveillance-and-motion-detection-with-the-raspberry-pi-python-and-opencv/)
 * [Face recognition](https://www.pyimagesearch.com/2018/06/25/raspberry-pi-face-recognition/)
 
+![Camera-ouside](images/camera_outside.jpg)
 
 ## APIs
 
