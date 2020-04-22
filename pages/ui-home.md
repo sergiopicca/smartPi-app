@@ -3,7 +3,7 @@ layout: default
 title: Home
 nav_order: 3
 parent: User interface
-# nav_order: 3
+
 ---
 #  Home
 In the Home Activity you can observe some information about yourself and of your house, in particular the currently weather forecast based on the location and the rooms that are available to compute operations; if you do not find a room, you can easly add a new one.
