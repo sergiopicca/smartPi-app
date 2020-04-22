@@ -4,7 +4,7 @@ title: Alexa-skill
 parent: Raspberry
 grand_parent: Backend
 nav_order: 2
-driveId: 1jbqwRchjJOf8mNOvHqeHN6dHxPynQioR
+driveId: 1jbqwRchjJOf8mNOvHqeHN6dHxPynQioR/preview
 ---
 
 # Alexa skill
