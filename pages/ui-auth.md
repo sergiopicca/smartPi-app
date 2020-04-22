@@ -27,6 +27,7 @@ In the same way of Google authentication, the Facebook button does the same oper
 More in depth, let us see the phase of registration.
 First of all, the user has to fill the form with his email, username and password and once he has completed it, the next step is to create an house or join an existing house.
 - *New house*: this option is suggested when you are new to this system and you are the owner of you house and you want to set up your videosurveillance system. The form to complete provides information about your house (address, geolocalization and eventually the telephone number) in order to recognize it. At the end, you are redirected to the Home Activity in your house.
+The geolocalization is managed by [Google Maps](https://developers.google.com/maps/documentation), where using the search bar on the top, you are able to place the marker on the map according to the address inserted but at the beginning, it uses your currently location if you allow the access to the GPS. 
 - *Existing house*: if you are new and someone has suggested to use this app, probabily he will provide also a code of his house: the only thing that you need is to insert it in the field and then you will be redirected to the Home Activity.
 
 ## What if I lose my password?
