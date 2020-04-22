@@ -8,7 +8,7 @@ nav_order: 1
 
 # Realtime database
 
-![Firebase](/images/firebase.png)
+![Firebase](images/firebase.png)
 
 We decided to use Firebase in order to store the relevant data of our application. In particular, we decided to use the Realtime database that is a **NoSQL** database, where the data is stored as JSON, very easy to maintain and to update. In general, we found the Firebase service very flexible, supporting any kind of service we needed and one nice think was the use of the **functions** to perform some action when data changes, such as sending notification to our clients, but let's examine the structure of the data first.
 
@@ -16,7 +16,7 @@ We decided to use Firebase in order to store the relevant data of our applicatio
 
 In the application we have many different data to handle, the information of the user, the information about the user's house, the number of rooms, the devices in the room and also the messages of between the members of the family. In the following image we can a look on how the data are organized.
 
-![Realtime](/images/data.png)
+![Realtime](images/data.png)
 
 Here we can find the main nodes of the JSON file of the Realtime database, let's consider the "houses" one, where we have stored the data about the houses of our users, we have indication of address, the location (lat and long) and the rooms. **Rooms have a really important role in our app**, because is where devices are located.
 
