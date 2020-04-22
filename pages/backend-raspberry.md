@@ -4,6 +4,7 @@ title: Raspberry
 nav_order: 4
 parent: Backend
 nav_order: 2
+has_children: true
 ---
 
 # Raspberry Pi backend
