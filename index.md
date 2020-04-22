@@ -19,3 +19,6 @@ Check our LinkedIn profile :)
 * [Gianluca Tasciotti](https://www.linkedin.com/in/gianluca-tasciotti/)
 * [Sergio Picca](https://www.linkedin.com/in/sergio-picca-801b0b173/)
 * [Stefano Milani](https://www.linkedin.com/in/stefano-milani-561044181/)
+
+
+[GitHub repository](https://github.com/sergiopicca/smartPi-app/)
