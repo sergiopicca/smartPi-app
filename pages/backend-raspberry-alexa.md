@@ -4,6 +4,7 @@ title: Alexa-skill
 parent: Raspberry
 grand_parent: Backend
 nav_order: 2
+driveId: 1jbqwRchjJOf8mNOvHqeHN6dHxPynQioR
 ---
 
 # Alexa skill
@@ -16,6 +17,8 @@ The skill allows to:
 * Enable/disable the face recognotion
 * Set the position of the servo motor from -90 to 90 degree
 * Request to take a photo
+
+{% include googleDrivePlayer.html id=page.driveId %}
 
 Unfortunately the developed skill (you can find the code in our GitHub repository) is in italian (to permits at my parents to use it).
 
