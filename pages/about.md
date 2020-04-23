@@ -12,7 +12,8 @@ We are three students attending the Master of Science of Engineering in Computer
 
 Working together may be not simple, sometimes can be complex organize tasks and job, but here we based our work on collaboration and continuous support. Everyone was present to help the others with some issue or just for discuss about some idea or brand new feature to add to our application. **It was a journey, but we enjoyed the trip**. A very good experience. Anyway, let's go in more details about the **contribution of each team member**.
 
-###  Customizing your jekyll website
+
+###   Customizing your jekyll website
 
 This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
 
