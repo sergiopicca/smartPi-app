@@ -18,15 +18,16 @@ Working together may be not simple, sometimes can be complex organize tasks and 
 
 - **Sergio**. Sergio designed the UI, building mockups and first interactions thanks to programs like AdobeXD. Furthermore, he developed the application according to the MVVM paradigm, dealing with callbacks and communication with the external storage, encouraging everybody to switch to the model.
 
-We have to say that this division was not maintained all the time, but in practice each of us collaborated in order to add functionalities to the app, so boundaries between different roles are blurred. We used the SCRUM approach during the developed of the application, with a sprint that was about of two weeks, trying to accomplish all original user stories we had. To learn more about us let's have a look to our LinkedIn profiles:
+We have to say that this division was not maintained all the time, but in practice each of us collaborated in order to add functionalities to the app, so boundaries between different roles are blurred. We used the SCRUM approach during the developed of the application, with a sprint that was about of two weeks, trying to accomplish all original user stories we had.
 
-Check our LinkedIn profile :)
+**To learn more about us let's have a look to our LinkedIn profiles:**
 
 - [Gianluca Tasciotti](https://www.linkedin.com/in/gianluca-tasciotti/)
 - [Sergio Picca](https://www.linkedin.com/in/sergio-picca-801b0b173/)
 - [Stefano Milani](https://www.linkedin.com/in/stefano-milani-561044181/)
 
-###   Customizing your jekyll website
+
+### Customizing your jekyll website
 
 This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
 
