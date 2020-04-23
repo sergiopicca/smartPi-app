@@ -32,7 +32,7 @@ Programming is a creative process, you may have to focus, since some days are pa
 
 ![Coding playlist](../images/coding.png)
 
-The playlist title is purely random ...
+The playlist title is purely random of course ...
 
 ### Customizing your jekyll website
 
