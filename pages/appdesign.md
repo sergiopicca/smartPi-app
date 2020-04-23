@@ -4,7 +4,7 @@ title: Design of the application
 nav_order: 2
 ---
 
-#  Building blocks
+# Building blocks
 
 ![Requirements](../images/requirements.jpeg)
 
@@ -24,4 +24,11 @@ Apart from the official documentation there is an interesting article on Medium 
 
 ![MVVM](../images/mvvm.jpeg)
 
-We tried to stick to this principle as much as possible, but since this was our first experience with this paradigm, we achieved a pretty good result but is not perfect, since in some occasion we give to much *importance* to the view model, we allow it to call some Web API and this may not result in a very desirable user experience. In practice, the view model should not be aware of the how data are fetched, namely how the model is provided, it should only react to UI interaction and perform the action triggered by the user. Moreover, talking about the view model we really find very useful the presence of **LiveData** and **MutableLiveData**. Live data are observable data holder, that allow to monitor the changes of data without creating explicit and rigid dependency paths between them.
+We tried to stick to this principle as much as possible, but since this was our first experience with this paradigm, we achieved a pretty good result but is not perfect, since in some occasion we give to much *importance* to the view model, we allow it to call some Web API and this may not result in a very desirable user experience. In practice, the view model should not be aware of the how data are fetched, namely how the model is provided, it should only react to UI interaction and perform the action triggered by the user. Moreover, talking about the view model we really find very useful the presence of **LiveData** and **MutableLiveData**. Live data are observable data holder, that allow to monitor the changes of data without creating explicit and rigid dependency paths between them. Now, suppose that you want to add a new room to your house and you would like to modify displayed number of rooms immediately, instead reassign the value, you can simple observe the data, with the following lines of code:
+```java
+
+```
+
+## Lesson learned
+
+We were glad to learn something new, but we still not get used to this kind of model, changes are not always easy and this transition may take a while. Personally, we like more some features of the MVC and our mindset is more close to this kind of paradigm, but we would like to get more experienced with the MVVM, try to understand its idea by writing more code and hopefully by updating and deploying new functionalities to smartPi application.
