@@ -6,7 +6,6 @@ parent: User interface
 ---
 #  Room details
 
-<img align="right" width="150" height="300" src="../images/ui-room.png">
 Once the user click on a particular room, this is the view presenting the devices of the room. Here the user can select one device, depending what he or she would like to do. For our application we actually implemented only the camera, so the other device are simply *unavailable**; however the application can be extended for instance to control some lights in the room, actually this functionality will be probably included in one next version.
 
 ##  Room detail fragment
