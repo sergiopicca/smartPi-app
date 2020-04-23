@@ -10,6 +10,8 @@ The ```HomeActivity``` is first activity that the user see when starts using the
 
 ![Home](../images/home.jpeg)
 
+At the bottom there is a navigation menu, allowing the user to switch between the three different views, in order to [chat](https://sergiopicca.github.io/smartPi-app/pages/ui-chat.html) with its family or [edit](https://sergiopicca.github.io/smartPi-app/pages/ui-edit.html) the info about his house.
+
 ##  Rooms 
 
 In the middle of the screen we used an horizontal recycler view in order to display the rooms of the user's house and by clicking on of them there will be the overview of added devices. It is also possible to delete a room or insert a new one by using the button on the bottom on the view, as we can see from the above image. All these actions are supported and specified by the view adapter, in fact **the core task of implementing a recycler view is creating the adapter**, that is defined according to MVVM paradigm. This is our list adapter, with a more clean structure.
@@ -86,10 +88,10 @@ class RoomListener(val clickListener: (r: Room) -> Unit) {
 }
 ```
 
-
 ##  My profile
 
-Moreover, on the top in the right corner we have a button about your [profile](https://sergiopicca.github.io/smartPi-app/pages/ui-profile-recap.html) where you can logout or if you want to change your profile picture, you can do it.
-Notice that in the bottom you can go throught the [chat](https://sergiopicca.github.io/smartPi-app/pages/ui-chat.html) or the [edit](https://sergiopicca.github.io/smartPi-app/pages/ui-edit.html) tabs.
+Moreover, on the top in the right corner we have a button about showing the user profile and a recap of his personal information, such as the **status**, meaning if is an owner or a guest, his email and there is also a button for logging out. We give the possibility to the user to change its profile image by selecting it from the gallery, as show above.
 
-![Home](../images/changePic.gif)
+![Profile](../images/changePic.gif)
+
+This is done by simply using intent and then get the result by overriding the ```onActivityResult()``` method and call one function of the ```HomeViewModel``` class to store the new image in the Firebase Storage.
