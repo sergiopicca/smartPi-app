@@ -8,7 +8,7 @@ nav_order: 2
 
 ![Requirements](../images/requirements.jpeg)
 
-Here we can find an overview of the building blocks of our application, some of them were also the mandatory requirements of our project. We have a responsive layout, since we used the ```ConstraintLayout```of Android supporting also landscape mode for every view, Google and Facebook sign in/sign up in our [login](https://sergiopicca.github.io/smartPi-app/pages/ui-auth.html), a multi-thread application, since many of our operations cannot be performed on the UI thread because we would like to prevent a bad UX and finally we deployed a personal backend on our [RaspberryPi](https://sergiopicca.github.io/smartPi-app/pages/backend-raspberry.html), supported by an external storage service by [Firebase](https://sergiopicca.github.io/smartPi-app/pages/backend-firebase.html).
+Here we can find an overview of the building blocks of our application, some of them were also the mandatory requirements of our project. We have a responsive layout, since we used the ```ConstraintLayout``` of Android supporting also landscape mode for every view, Google and Facebook sign in/sign up in our [login](https://sergiopicca.github.io/smartPi-app/pages/ui-auth.html), a multi-thread application, since many of our operations cannot be performed on the UI thread because we would like to prevent a bad UX and finally we deployed a personal backend on our [RaspberryPi](https://sergiopicca.github.io/smartPi-app/pages/backend-raspberry.html), supported by an external storage service by [Firebase](https://sergiopicca.github.io/smartPi-app/pages/backend-firebase.html).
 
 ##  Design of the application
 
