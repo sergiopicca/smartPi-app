@@ -8,4 +8,4 @@ parent: User interface
 
 One the features of our application was to integrate a little chat allowing the owner of the house and his guests, we like to call it his **family**, to communicate in order to leave some simple message, maybe also regarding the house, such as "Hi guys, remember that the video surveillance system is active!".
 
-![](../images/luigi-side.gif)   ![](../images/yoshi-side.gif)
+![Chat](../images/chatMessage.gif)
