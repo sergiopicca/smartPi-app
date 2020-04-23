@@ -4,7 +4,7 @@ title: Design of the application
 nav_order: 2
 ---
 
-# Building blocks
+#  Building blocks
 
 ![Requirements](../images/requirements.jpeg)
 
