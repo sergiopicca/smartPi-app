@@ -7,18 +7,13 @@ title: SmartPi
 nav_order: 1
 ---
 
-The idea
-==================
+#  The idea
+
 SmartPi is an Android smart surveillance application that we built as a University project for the *Mobile application and cloud computing course* in *Sapienza University of Rome*. The application connects to a remote controllable PiCamera on a Raspberry Pi 3, supporting both **motion detection** and **face recognition** that we can switch on by using the app.
 
 ![Overview of the app](images/overview.png)
 
 
-Check our LinkedIn profile :)
+To learn more about us, the aim of this project and to take a look of our LinkedIn profiles you can go to the [about page](https://sergiopicca.github.io/smartPi-app/pages/about.html).
 
-* [Gianluca Tasciotti](https://www.linkedin.com/in/gianluca-tasciotti/)
-* [Sergio Picca](https://www.linkedin.com/in/sergio-picca-801b0b173/)
-* [Stefano Milani](https://www.linkedin.com/in/stefano-milani-561044181/)
-
-
-[GitHub repository](https://github.com/sergiopicca/smartPi-app/)
+If you want to look the code in more detail you can access to the official [GitHub repository](https://github.com/sergiopicca/smartPi-app/) of this project.
