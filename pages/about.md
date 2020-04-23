@@ -28,7 +28,7 @@ We have to say that this division was not maintained all the time, but in practi
 
 ## Always need some good music
 
-Programming is a creative process, you may have to focus, since some days are past from the old but gold ```Hello world!```. Personally we all like to listen some music when we are coding, so there we want also to share to anybody would like to hear one of the playlists that supported us in every development day, most important when things didn't go in the right way. [Click here to see the playlist on Spotify](https://open.spotify.com/playlist/4wHgAEXIy9NyLt6mr9AmxX?si=3MMp1biLRrCDl5EaFvVUYQ).
+Programming is a creative process, you may have to focus, since some days are past from the old but gold ```Hello world!```. Personally we all like to listen some music when we are coding, so we would also to share one of the playlists that supported us in every development day, most important when things didn't go in the right way (most of the time). [Click here to see the playlist on Spotify](https://open.spotify.com/playlist/4wHgAEXIy9NyLt6mr9AmxX?si=3MMp1biLRrCDl5EaFvVUYQ) and enjoy.
 
 ![Coding playlist](../images/coding.png)
 
