@@ -55,7 +55,16 @@ The ```Message``` class as we will describe in the model section has a field tha
 
 ## Read and send messages
 
-The messages are stored in the ```house-messages``` node of the json file on Firebase Realtime database, under the house of which the user is owner or guest and they are retrieved by using the ```ChildEventListener``` where we listen for a particular item of the list, then we needed to override its four methods:
+The messages are stored in the ```house-messages``` node of the json file on Firebase Realtime database, under the house id of which the user is owner or guest and they are retrieved by using the ```ChildEventListener``` . Everything happens inside the following function.
+```java
+private fun getMsgFromFirebase(f:FirebaseCallbackMsg){
+        // Id of the first house
+        val mHouse = _house.value
+        val mPath = "house-messages"
+
+        val refMsg = FirebaseDatabase.getInstance().getReference("/${mPath}/${mHouse}/")
+```
+The method takes a callback function that will be the one that will add the messages to the list associated to the recycler view. The two variables ```mPath``` and ```mHouse``` are used to define the correct reference path to access inside the storage, in particular the latter contains the id of the house that is required to get the correct messages. The ```ChildEventListener``` listener is slightly different from the ```EventValueListener``` and the ```SingleEventValueListner``` since we listen for a particular item of the list of the json file, then we needed to override four methods
 
 ```java
 refMsg.addChildEventListener(object : ChildEventListener {
