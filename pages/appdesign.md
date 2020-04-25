@@ -11,9 +11,11 @@ nav_order: 2
 Here we can find an overview of the building blocks of our application, some of them were also the mandatory requirements of our project. We have a responsive layout, since we used the ```ConstraintLayout``` of Android supporting also landscape mode for every view, Google and Facebook sign in/sign up in our [login](https://sergiopicca.github.io/smartPi-app/pages/ui-auth.html), a multi-thread application, since many of our operations cannot be performed on the UI thread because we would like to prevent a bad UX and finally we deployed a personal backend on our [RaspberryPi](https://sergiopicca.github.io/smartPi-app/pages/backend-raspberry.html), supported by an external storage service by [Firebase](https://sergiopicca.github.io/smartPi-app/pages/backend-firebase.html).
 
 ## Application architecture
-The following scheme briefly describe in a simple way what are the main architecture of our application and how the different components communicate among them.
+The following scheme briefly describe in a simple way what is the main architecture of our application and how the different components communicate among them.
 
 ![Architecture](../images/apparch.png)
+
+We used a server built on top of a RaspberryPi to develop the main feature of the our video surveillance system and our client application communicate with it in order to control the camera in a *ubiquitous way*. In other words, no matter where the user is, he can move the camera, take snapshots, activate the motion detection or face recognition mode and receive notifications if a stranger breaks in. 
 
 ##  Design pattern
 
