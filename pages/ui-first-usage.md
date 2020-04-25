@@ -19,24 +19,22 @@ First of all, we have to clarify that all these functionality are offered by Goo
 
 In detail, the search bar on the top is an ```AutocompleteFragment``` which is provided by Google. This widget gives the opportunity to search each address on the world (or if you want a specific country, you can set it easily) and once the user has chosen one of them, a ```Place``` is obtained by the callback and a ```Marker``` is pointed out on the map, which is a ```SupportMapFragment```.
 
-The ```Place``` has some features and in our case, we decided to use these one: ```name```, ```id```, ```latLng.latitude``` and ```address```. The feature captured are used in two functions:
+The ```Place``` has some features and in our case, we decided to use these one: ```name```, ```id```, ```latLng``` and ```address```. The feature captured are used in two functions:
 
 ```java
-class RoomAdapter(val clickListener: RoomListener): ListAdapter<Room, RoomAdapter.ViewHolder>(RoomNightDiffCallback()) {
-    private var listener: ((item:Room) -> Unit)? = null
+private fun placeMarkerOnMap(location: LatLng) {
+        val markerOptions = MarkerOptions().position(location)
 
-    fun deleteRoom(listener: (item: Room) -> Unit) {
-        this.listener = listener
+        lastMarker = map.addMarker(markerOptions)
+        map.animateCamera(CameraUpdateFactory.newLatLngZoom(location, 18f))
     }
+```
+In this little snippet, we take in input the ```latLng``` of the ```Place``` and we place the ```Marker``` on the map and we zoom the area interested.
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder.from(parent)
-    }
+The result ```p0``` is the callback obtained by the searched address and it is fixed in the ```EditText``` of the ```FirstUsageActivity```
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val item = getItem(position)
-        holder.bind(item, clickListener, listener)
-    }
+```java
+text_address_map.setText(p0.address)
 ```
 
 ```java
