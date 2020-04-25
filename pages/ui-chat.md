@@ -50,3 +50,58 @@ override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 ```
 
 The ```Message``` class as we will describe in the model section has a field that tells if the current logged user is the sender of the message or not, assuming value **true** or **false** respectively. The two items view are specular, the one is just the reflection of the other, with a different color for the chat bubble.
+
+## Read and send messages
+
+The messages are stored in the ```house-messages``` node of the json file on Firebase Realtime database, under the house of which the user is owner or guest and they are retrieved by using the ```ChildEventListener``` where we listen for a particular item of the list, then we needed to override its four methods:
+
+```java
+refMsg.addChildEventListener(object : ChildEventListener {
+  override fun onChildAdded(p0: DataSnapshot, p1: String?) {
+      // Get the messages from the realtime db
+      val newMsg = p0.getValue(ChatMessage::class.java)
+      if(newMsg != null){
+          f.onCallbackMsg(newMsg)
+      }
+  }
+
+  override fun onChildMoved(p0: DataSnapshot, p1: String?) {
+      // ...
+  }
+
+  override fun onChildChanged(p0: DataSnapshot, p1: String?) {
+      // ...
+  }
+
+  override fun onChildRemoved(p0: DataSnapshot) {
+      // ...
+  }
+
+  override fun onCancelled(p0: DatabaseError) {
+      // ...
+  }
+  })
+```
+
+When a new message is retrieved we invoke a callback method that basically just add the message the the ```MutableLiveData<MutableList<Message>>```. The ```ChatMessage``` class is a support class to hold just the significant information of the message, then the additional field like the ```sendByMe``` will be added in the ```onCallbackMsg```.
+
+```java
+private fun readMsg(){
+  val supportList = mutableListOf<Message>()
+  getMsgFromFirebase(object : FirebaseCallbackMsg{
+      override fun onCallbackMsg(m:ChatMessage) {
+          val usr = _users.value?.get(m.fromId)!!
+          if(usr.uid == currentUserId){
+              supportList.add(Message(m.id,m.text,usr.username,usr.profileImageUrl,true, m.timestamp))
+              _completeMessages.value = supportList
+
+          }else{
+              supportList.add(Message(m.id,m.text,usr.username,usr.profileImageUrl,false, m.timestamp))
+              _completeMessages.value = supportList
+          }
+      }
+  })
+}
+```
+
+We need a support list because we cannot directly add elements to the mutable live data ```_completeMessages``` list, so every time we should reassign its value. All these functions **are performed insider the view model** of the chat fragment.
