@@ -51,6 +51,8 @@ override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
 The ```Message``` class as we will describe in the model section has a field that tells if the current logged user is the sender of the message or not, assuming value **true** or **false** respectively. The two items view are specular, the one is just the reflection of the other, with a different color for the chat bubble.
 
+![Items](../images/items.jpeg)
+
 ## Read and send messages
 
 The messages are stored in the ```house-messages``` node of the json file on Firebase Realtime database, under the house of which the user is owner or guest and they are retrieved by using the ```ChildEventListener``` where we listen for a particular item of the list, then we needed to override its four methods:
