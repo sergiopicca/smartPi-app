@@ -20,6 +20,8 @@ As you can see from the image, the interface of the editor is pretty simple you 
 
 In this case we pass just four parameters, that are necessary to display in a correct way the room, in particular we have the ```roomId```, the ```roomName``` and the ```houseId```. These three parameters (the ```deviceUnavaiable``` will be used later) are important to retrieve the devices from the correct room in the correct house, namely to specify in a proper manner the path in the json file on the Firebase Realtime database.
 
+One issue of the navigation may be related to the fact that is a graph so as all graphs when the number of nodes, the destinations, is high we **loose readability** and follow the path of one arrow might be complicated.
+
 ##  Room detail fragment
 
 In our code the fragment holding the room is called ```RoomDetailFragment```, that hosts a recycler view with a **grid layout** to display the devices:
