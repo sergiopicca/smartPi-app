@@ -19,7 +19,7 @@ So as we can see we have two buttons where the user can tap according to his nec
 
 First of all, we have to clarify that all these functionality are offered by Google through [Google Maps API](https://developers.google.com/maps/documentation) and we used a little tutorial as a "guide-line" from [here](https://www.raywenderlich.com/230-introduction-to-google-maps-api-for-android-with-kotlin).
 
-![Add house](../images/register-house.jpeg)
+![Add house](../images/register_house.jpeg)
 
 In detail, the search bar on the top is an ```AutocompleteFragment``` which is provided by Google. This widget gives the opportunity to search each address on the world (or if you want a specific country, you can set it easily) and once the user has chosen one of them, a ```Place``` is obtained by the callback and a ```Marker``` is pointed out on the map, which is a ```SupportMapFragment```.
 
