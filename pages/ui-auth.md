@@ -29,7 +29,7 @@ First of all, the user has to fill the form with his email, username and passwor
 
 This option is suggested when you are new to this system and you are the owner of you house and you want to set up your video surveillance system. The form to complete provides information about your house (address, geolocalization and eventually the telephone number) in order to recognize it. At the end, you are redirected to the Home Activity in your house.
 
-The geolocalization is managed by [Google Maps](https://developers.google.com/maps/documentation), where using the search bar on the top, you are able to place the marker on the map according to the address inserted but at the beginning, it uses your currently location if you allow the access to the GPS.
+The geolocation is managed by [Google Maps](https://developers.google.com/maps/documentation), where using the search bar on the top, you are able to place the marker on the map according to the address inserted but at the beginning, it uses your currently location if you allow the access to the GPS.
 
 ### Existing house
 
