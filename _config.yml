@@ -18,7 +18,6 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: "SmartPi"
 logo: "/images/logo.jpeg"
 remote_theme: pmarsceill/just-the-docs
 
