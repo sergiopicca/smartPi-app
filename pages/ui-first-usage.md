@@ -43,6 +43,8 @@ text_address_map.setText(p0.address)
 The most of the work is done: now the user has to add a name of this house and optionally the telephone.
 When all the information are inserted in the form, the user can send them to the database in order to store the new house.
 
+![Add house demo](../images/add-house-gif.gif)
+
 ## Existing house
 
 The user has the possibility to join an existing house by inserting the code obtained when the house is successfully created. There is no trick there is no deception.
