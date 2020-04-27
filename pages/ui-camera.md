@@ -9,7 +9,7 @@ nav_order: 5
 
 The camera fragment gives the opportunity to the user to manage remotely its piCamera, and to see what happens in his house.
 
-(IMAGE)
+![Camera](../images/camera.jpeg)
 
 The UI offers:
 
