@@ -19,7 +19,7 @@ If you have a Google account and you do not want to have some troubles with reme
 ### Facebook
 In the same way of Google authentication, the Facebook button does the same operation but it uses your Facebook account. The reference to the Facebook authentication documentation can be found [here](https://firebase.google.com/docs/auth/android/facebook-login)
 
-![Authenticate](../images/auth.jpeg)
+![Authenticate](../images/authentication.jpeg)
 
 ## Registration
 More in depth, let us see the phase of registration.
