@@ -11,13 +11,13 @@ nav_order: 1
 The Login gives you three different mode to access in our app.
 
 ### Email and password
-It is the classic method: once you are registered, you put in the fields your email and password inserted during the registration step. The reference to the doc can be found [here](https://firebase.google.com/docs/auth/android/password-auth)
+It is the classic method: once you are registered, you put in the fields your email and password inserted during the registration step. The reference to the doc can be found [here](https://firebase.google.com/docs/auth/android/password-auth).
 
 ### Google
-If you have a Google account and you do not want to have some troubles with remembering your password, it will be the authentication that you need: pressing the Google button you automatically are signed up and then logged in our app. The reference to the Google authentication documentation can be found [here](https://firebase.google.com/docs/auth/android/google-signin)
+If you have a Google account and you do not want to have some troubles with remembering your password, it will be the authentication that you need: pressing the Google button you automatically are signed up and then logged in our app. The reference to the Google authentication documentation can be found [here](https://firebase.google.com/docs/auth/android/google-signin).
 
 ### Facebook
-In the same way of Google authentication, the Facebook button does the same operation but it uses your Facebook account. The reference to the Facebook authentication documentation can be found [here](https://firebase.google.com/docs/auth/android/facebook-login)
+In the same way of Google authentication, the Facebook button does the same operation but it uses your Facebook account. The reference to the Facebook authentication documentation can be found [here](https://firebase.google.com/docs/auth/android/facebook-login).
 
 ![Authenticate](../images/authentication.jpeg)
 
