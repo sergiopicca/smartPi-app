@@ -19,7 +19,6 @@
 # in the templates via {{ site.myvariable }}.
 
 title: "SmartPi"
-logo: "/assets/images/logo.png"
 remote_theme: pmarsceill/just-the-docs
 
 # Exclude from processing.
