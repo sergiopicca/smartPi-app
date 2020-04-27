@@ -44,5 +44,7 @@ The most of the work is done: now the user has to add a name of this house and o
 When all the information are inserted in the form, the user can send them to the database in order to store the new house.
 
 ## Existing house
-(IMAGE ABOUT EXISTING HOUSE)
+
 The user has the possibility to join an existing house by inserting the code obtained when the house is successfully created. There is no trick there is no deception.
+
+![Secret code](../images/secret-code.jpeg)
