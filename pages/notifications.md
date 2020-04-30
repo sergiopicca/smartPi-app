@@ -25,3 +25,5 @@ As we argued before one the feature that we would like to ensure is be notified 
 Each of those triggers can be run on the backend managed by cloud functions and in each of this cases we have to specify a location in the database that can be affected by one of the components. Then you can notify the clients of your application to tell them that something has changed. The following figure shows a simple example.
 
 ![Example of cloud function](../cloud-fun-example.png)
+
+This is a beta functionality and we use it to tell to the user that a new message has arrived so there was a change in the ```house-messages``` branch of the database.  
