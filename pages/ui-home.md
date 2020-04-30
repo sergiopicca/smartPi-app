@@ -95,3 +95,43 @@ Moreover, on the top in the right corner we have a button about showing the user
 ![Profile](../images/changePic.gif)
 
 This is done by simply using intent and then get the result by overriding the ```onActivityResult()``` method and call one function of the ```HomeViewModel``` class to store the new image in the Firebase Storage.
+
+## What's the weather like today?
+
+In the home page we provided also a simple weather forecast section, in which the user can see the temperature and if it is sunny or not. In order to implement this simple section we made use of the [OpenWeather](https://openweathermap.org/api) API and the [Volley](https://developer.android.com/training/volley) library to perform HTTP requests. Every network request performed by Volley is done in a background thread. Volley takes care of this behind the scenes, without affecting at all the user experience.
+
+```java
+    private fun callForWeather(lat:String, lon:String){
+        val api = "[your_API_KEY]"
+        val url = "https://api.openweathermap.org/data/2.5/weather?lat=$lat&lon=$lon&$api"
+        val jsonObjectRequest = JsonObjectRequest(
+            Request.Method.GET, url, null,
+            Response.Listener { response ->
+                val mainObject: JSONObject = response.getJSONObject("main")
+
+                val array: JSONArray = response.getJSONArray("weather")
+                val jobject: JSONObject = array.getJSONObject(0)
+                // Icon of the weather
+                val icon = jobject.get("icon")
+                val iconURL = "https://openweathermap.org/img/wn/$icon@2x.png"
+                // Temperature
+                val temp: String = mainObject.getDouble("temp").toString()
+                // Weather description
+                val description: String = jobject.getString("description")
+                // The city name is an element of the JSON object
+                val city: String = response.getString("name")
+
+                // Convert the temperature, the defaul is in Kelvin
+                // ... Update the UI
+            },
+            Response.ErrorListener { error ->
+                Log.e("VOLLEY",error.toString())
+            }
+        )
+
+        val queue: RequestQueue = Volley.newRequestQueue(mContext)
+        queue.add(jsonObjectRequest)
+    }
+```
+
+This is the function that performs the request from the ```HomeViewModel```class and from the We access to the JSON returned by the url, it has a particular structure, then we get the ```weather``` node, that is an array of different elements and it contains the temperature, the description (sunny, cloudy, ...) the city, the forecast and even the fancy icon. At the end we assign those values to the ```MutableLiveData``` bound to the components inside the view and we are done, since the update is automatically because of the nature of this kind of data and the ```DataBinding``` properties.
