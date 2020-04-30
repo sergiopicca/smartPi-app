@@ -20,8 +20,6 @@
 
 title: "SmartPi"
 remote_theme: pmarsceill/just-the-docs
-plugins:
-  - jekyll-seo-tag
 
 # Exclude from processing.
 # The following items will not be processed, by default.
