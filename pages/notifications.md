@@ -27,3 +27,17 @@ Each of those triggers can be run on the backend managed by cloud functions and 
 ![Example of cloud function](../images/cloud-fun-example.png)
 
 This is a beta functionality and we use it to tell to the user that a new message has arrived so there was a change in the ```house-messages``` branch of the database.  
+
+## Something is breaking in!
+
+This type of notification, that is very important, is send to users by the RaspberryPi when the camera detects a movement and it is in "Motion detection" mode. Again, thanks to FCM with a little piece of code we are able to inform the users even if their application is closed, furthermore the camera automatically take a snapshot that the user can download.
+
+```python
+class FirebaseUtils:
+
+def __init__(self, bucket, conf):
+  self.bucket = bucket
+  self.conf = conf
+  self.push_service = FCMNotification(api_key=conf["api_key"])
+
+```
