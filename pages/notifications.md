@@ -15,4 +15,13 @@ FCM topic messaging is based on the publish/subscribe model. If we ask for messa
 ## Serverless architecture
 
 ![Functions](../images/functions.jpg)
-As we discussed
+As we argued before one the feature that we would like to ensure is be notified even if the app is running in the background or even if it is closed. In particular, to achieve this last functionality we decided to move to a serverless architecture using the **Firebase cloud functions**, that are an example of **FaaS (Function-as-a-service)**, exploiting the fact that we used the Realtime database for handling data to implement a **trigger**. When we work to Realtime database we have four type of triggers to work with, that responds to change in the database:
+
+- ```onWrite()```, which triggers when data is created, updated, or deleted in Realtime Database.
+- ```onCreate()```, which triggers when new data is created in Realtime Database.
+- ```onUpdate()```, which triggers when data is updated in Realtime Database.
+- ```onDelete()```, which triggers when data is deleted from Realtime Database.
+
+Each of those triggers can be run on the backend managed by cloud functions and in each of this cases we have to specify a location in the database that can be affected by one of the components. Then you can notify the clients of your application to tell them that something has changed. The following figure shows a simple example.
+
+![Example of cloud function](../cloud-fun-example.png)
