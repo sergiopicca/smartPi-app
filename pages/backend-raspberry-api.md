@@ -61,6 +61,9 @@ Used to check the availability of the device, and to check if actual token is ex
 
 | RESPONSE STATUS | CODE | VALUE | DESCRIPTION |
 | --- | --- | --- | --- |
+| ERROR | 401 | `{"status":"error" , "message":"token missing"}` | Authorization token not provided in HTTP HEADER |
+| ERROR | 401 | `{"status":"error" , "message":"token expired"}` | Authorization token provided expired |
+| ERROR | 401 | `{"status":"error" , "message":"token invalid"}` | Authorization token provided invalid |
 | SUCCESS | 200 | `{"status":"success","message":"Hello, World!"}`| Display an "Hello, World!" message |
 
 ### **Get the motion detection status**
@@ -100,7 +103,7 @@ Used to check the availability of the device, and to check if actual token is ex
 | SUCCESS | 200 | `{ "status": "success","message":"Motion activated"}` | Returned if motion detection is actived |
 | SUCCESS | 200 |`{ "status": "success","message":"Motion disabled"}` | Returned if motion detection is disabled |
 
-### **Get the face detection status**
+### **Get the face recognition status**
 
 | REQUEST PARAMETERS | VALUE |
 |---|---|
@@ -117,7 +120,7 @@ Used to check the availability of the device, and to check if actual token is ex
 | SUCCESS | 200 | `{ "status": "success","message":"Face detection active"}` | Returned if face detection is active |
 | SUCCESS | 200 |`{ "status": "success","message":"Face detection not active"}` | Returned if face detection is disable |
 
-### **Set motion detection status**
+### **Set the face recognition status**
 
 | REQUEST PARAMETERS | VALUE |
 |---|---|
@@ -127,6 +130,7 @@ Used to check the availability of the device, and to check if actual token is ex
 | GET PARAMETERS | ` detection=<0/1>` |
 | HTTP HEADER (optional): | `"ContentType : application/json"`  |
 | REQUEST URL: | your-api-url/face?detection=`<value>` |
+
 
 | RESPONSE STATUS | CODE | VALUE | DESCRIPTION |
 | --- | --- | --- | --- |
