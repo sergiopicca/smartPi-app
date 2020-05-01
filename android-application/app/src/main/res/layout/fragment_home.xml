@@ -23,32 +23,17 @@
             android:background="@color/colorBackground">
 
             <TextView
-                android:id="@+id/text_home"
-                android:layout_width="wrap_content"
+                android:id="@+id/text_home_username"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="48dp"
-                android:fontFamily="@font/aspira_medium"
-                android:text="Hello,"
-                android:textColor="#FFFFFF"
-                android:textSize="42sp"
-                app:layout_constraintEnd_toStartOf="@+id/text_home_username"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintHorizontal_chainStyle="packed"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/text_home_username"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="48dp"
                 android:fontFamily="@font/aspira_bold"
-                android:text="@{homeViewModel.fetchedUser.username.toString()}"
+                android:text="@{`Hello, ` + homeViewModel.fetchedUser.username.toString()}"
                 android:textColor="#FFFFFF"
-                android:textSize="42sp"
-                app:layout_constraintStart_toEndOf="@+id/text_home"
+                android:textSize="36sp"
+                app:layout_constraintEnd_toStartOf="@+id/showUserRecap"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
@@ -56,16 +41,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 android:fontFamily="@font/aspira_medium"
                 android:text="What do you want to do today?"
                 android:textColor="#8B8989"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text_home" />
+                app:layout_constraintStart_toStartOf="@+id/text_home_username"
+                app:layout_constraintTop_toBottomOf="@+id/text_home_username" />
 
 
             <View
@@ -85,7 +69,7 @@
                 android:id="@+id/home_calendar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="54dp"
+                android:layout_marginStart="32dp"
                 android:layout_marginTop="24dp"
                 android:drawableStart="@drawable/ic_ionic_md_calendar"
                 android:drawablePadding="10sp"
@@ -114,7 +98,7 @@
                 android:id="@+id/home_temperature"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="80dp"
+                android:layout_marginStart="32dp"
                 android:fontFamily="@font/aspira_thin"
                 android:text="@{homeViewModel._tempWeather}"
                 android:textColor="@color/colorBackgroundLight"
@@ -140,6 +124,7 @@
                 android:layout_height="50dp"
                 android:layout_marginStart="320dp"
                 android:layout_marginTop="41dp"
+                android:layout_marginEnd="24dp"
                 android:layout_marginBottom="37dp"
                 android:background="@drawable/ic_dialog_menu"
                 app:layout_constraintBottom_toTopOf="@+id/email_view"

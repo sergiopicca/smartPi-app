@@ -9,7 +9,7 @@ class FirebaseUtils:
 		self.conf = conf
 		self.push_service = FCMNotification(api_key=conf["api_key"])
 
-	# Upload image on Dropbox
+	# Upload image on Firebase
 	def upload(self, frame,ts, notification = True):
 		# Save frame on disk
 		cv2.imwrite("images/snapshot.jpg", frame)

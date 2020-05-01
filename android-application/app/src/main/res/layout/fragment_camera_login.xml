@@ -9,127 +9,135 @@
             type="com.example.firebaseauthmvvm.ui.picamera.login.CameraLoginViewModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorBackground"
-        tools:context=".ui.picamera.login.CameraLoginActivity">
+        android:background="@color/colorBackground">
 
-        <ImageButton
-            android:id="@+id/back_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="32dp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:background="@color/colorBackground"
-            android:rotation="180"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_arrow_back_48px" />
+            tools:context=".ui.picamera.login.CameraLoginActivity">
 
-        <TextView
-            android:id="@+id/add_device_text"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="72dp"
-            android:layout_marginEnd="24dp"
-            android:fontFamily="@font/aspira_medium"
-            android:text="@string/add_device"
-            android:textColor="@android:color/white"
-            android:textSize="42sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <ImageButton
+                android:id="@+id/back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="32dp"
+                android:background="@color/colorBackground"
+                android:rotation="180"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_arrow_back_48px" />
 
-        <EditText
-            android:id="@+id/url_text_input"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginEnd="24dp"
-            android:background="@drawable/input_type_custom"
-            android:padding="10sp"
-            android:ems="10"
-            android:hint="@string/url_hint"
-            android:inputType="textPersonName"
-            android:onTextChanged="@{cameraLoginViewmodel::onUrlChanged}"
-            android:text="@={cameraLoginViewmodel.urlObeserv}"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/add_device_text" />
+            <TextView
+                android:id="@+id/add_device_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="72dp"
+                android:layout_marginEnd="24dp"
+                android:fontFamily="@font/aspira_medium"
+                android:text="@string/add_device"
+                android:textColor="@android:color/white"
+                android:textSize="42sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/name_text_input"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="24dp"
-            android:background="@drawable/input_type_custom"
-            android:padding="10sp"
-            android:ems="10"
-            android:hint="@string/name_hint"
-            android:inputType="textPersonName"
-            android:onTextChanged="@{cameraLoginViewmodel::onNameChanged}"
-            android:text="@={cameraLoginViewmodel.nameObserv}"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/url_text_input" />
+            <EditText
+                android:id="@+id/url_text_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/input_type_custom"
+                android:padding="10sp"
+                android:ems="10"
+                android:hint="@string/url_hint"
+                android:inputType="textPersonName"
+                android:onTextChanged="@{cameraLoginViewmodel::onUrlChanged}"
+                android:text="@={cameraLoginViewmodel.urlObeserv}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_device_text" />
 
-        <Spinner
-            android:id="@+id/device_type_spinner"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="24dp"
-            android:background="@drawable/input_type_custom"
-            android:padding="10sp"
-            android:entries="@array/device_types"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/name_text_input" />
+            <EditText
+                android:id="@+id/name_text_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/input_type_custom"
+                android:padding="10sp"
+                android:ems="10"
+                android:hint="@string/name_hint"
+                android:inputType="textPersonName"
+                android:onTextChanged="@{cameraLoginViewmodel::onNameChanged}"
+                android:text="@={cameraLoginViewmodel.nameObserv}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/url_text_input" />
 
-        <EditText
-            android:id="@+id/password_text_input"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="24dp"
-            android:background="@drawable/input_type_custom"
-            android:padding="10sp"
-            android:ems="10"
-            android:hint="@string/password_hint"
-            android:inputType="textPassword"
-            android:onTextChanged="@{cameraLoginViewmodel::onPasswordChanged}"
-            android:text="@={cameraLoginViewmodel.password}"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/device_type_spinner" />
+            <Spinner
+                android:id="@+id/device_type_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/input_type_custom"
+                android:padding="10sp"
+                android:entries="@array/device_types"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/name_text_input" />
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginEnd="24dp"
-            android:background="@drawable/button_light"
-            android:elevation="50dp"
-            android:enabled="@{cameraLoginViewmodel.btnSelected}"
-            android:fontFamily="@font/aspira_medium"
-            android:textSize="16sp"
-            android:textAllCaps="false"
-            android:text="@string/create_pi_camera"
-            android:textColor="#FFFFFF"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/password_text_input" />
+            <EditText
+                android:id="@+id/password_text_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/input_type_custom"
+                android:padding="10sp"
+                android:ems="10"
+                android:hint="@string/password_hint"
+                android:inputType="textPassword"
+                android:onTextChanged="@{cameraLoginViewmodel::onPasswordChanged}"
+                android:text="@={cameraLoginViewmodel.password}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/device_type_spinner" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/button_light"
+                android:elevation="50dp"
+                android:enabled="@{cameraLoginViewmodel.btnSelected}"
+                android:fontFamily="@font/aspira_medium"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:text="@string/create_pi_camera"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/password_text_input" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
 </layout>

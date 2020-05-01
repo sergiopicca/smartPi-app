@@ -9,80 +9,88 @@
             type="com.example.firebaseauthmvvm.ui.picamera.recoveryLogin.CameraRecoveryLoginViewModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/cameraRecoveryLogin"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorBackground"
-        tools:context=".ui.picamera.recoveryLogin.CameraRecoveryLogin">
+        android:background="@color/colorBackground">
 
-        <ImageButton
-            android:id="@+id/back_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="32dp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cameraRecoveryLogin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:background="@color/colorBackground"
-            android:rotation="180"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_arrow_back_48px" />
+            tools:context=".ui.picamera.recoveryLogin.CameraRecoveryLogin">
 
-        <TextView
-            android:id="@+id/recovery_login_text"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
-            android:fontFamily="@font/aspira_medium"
-            android:text="@string/recovery_login_text"
-            android:textColor="@android:color/white"
-            android:textSize="42sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.35" />
+            <ImageButton
+                android:id="@+id/back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="32dp"
+                android:background="@color/colorBackground"
+                android:rotation="180"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_arrow_back_48px" />
 
-        <EditText
-            android:id="@+id/recovery_pass_text"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginEnd="24dp"
-            android:background="@drawable/input_type_custom"
-            android:ems="10"
-            android:hint="@string/password_hint"
-            android:importantForAutofill="no"
-            android:inputType="textPassword"
-            android:onTextChanged="@{viewModel::onPasswordChanged}"
-            android:padding="10sp"
-            android:text="@={viewModel.password}"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/recovery_login_text" />
+            <TextView
+                android:id="@+id/recovery_login_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:fontFamily="@font/aspira_medium"
+                android:text="@string/recovery_login_text"
+                android:textColor="@android:color/white"
+                android:textSize="42sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.35" />
 
-        <Button
-            android:id="@+id/recovery_button"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginEnd="24dp"
-            android:background="@drawable/button_light"
-            android:elevation="50dp"
-            android:enabled="@{viewModel.btnSelected}"
-            android:fontFamily="@font/aspira_medium"
-            android:onClick="@{() -> viewModel.login()}"
-            android:text="@string/recovery_login_button"
-            android:textAllCaps="false"
-            android:textColor="@color/colorBackgroundLight"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/recovery_pass_text" />
+            <EditText
+                android:id="@+id/recovery_pass_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/input_type_custom"
+                android:ems="10"
+                android:hint="@string/password_hint"
+                android:importantForAutofill="no"
+                android:inputType="textPassword"
+                android:onTextChanged="@{viewModel::onPasswordChanged}"
+                android:padding="10sp"
+                android:text="@={viewModel.password}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recovery_login_text" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <Button
+                android:id="@+id/recovery_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/button_light"
+                android:elevation="50dp"
+                android:enabled="@{viewModel.btnSelected}"
+                android:fontFamily="@font/aspira_medium"
+                android:onClick="@{() -> viewModel.login()}"
+                android:text="@string/recovery_login_button"
+                android:textAllCaps="false"
+                android:textColor="@color/colorBackgroundLight"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recovery_pass_text" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
 
 </layout>

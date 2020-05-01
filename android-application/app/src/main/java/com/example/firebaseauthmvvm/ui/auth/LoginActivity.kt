@@ -11,7 +11,6 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
 import com.example.firebaseauthmvvm.R
 import com.example.firebaseauthmvvm.databinding.ActivityLoginBinding
-import com.example.firebaseauthmvvm.utils.startHomeActivity
 import com.example.firebaseauthmvvm.utils.startSplashActivity
 import com.facebook.*
 import com.facebook.login.LoginManager
@@ -106,7 +105,8 @@ class LoginActivity : AppCompatActivity(), AuthListener, KodeinAware {
 
     override fun onFailure(message: String) {
         progressbar.visibility = View.GONE
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+        val errorMsg = "Seems something went wrong with your email/password..."
+        Toast.makeText(this, errorMsg, Toast.LENGTH_SHORT).show()
     }
 
     override fun onStart() {
